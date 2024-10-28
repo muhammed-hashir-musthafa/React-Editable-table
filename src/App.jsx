@@ -34,14 +34,13 @@ function App() {
   };
 
   const prepareDataForApi = (data) => {
-    // Uncomment the following to enable API call
-    // axios.post("http://localhost:5000", data)
-    //   .then(res => {
-    //     console.log("Data sent successfully:", res.data);
-    //   })
-    //   .catch(error => {
-    //     console.error("There was an error sending the data:", error);
-    //   });
+    axios.post("http://localhost:5000", data)
+      .then(res => {
+        console.log("Data sent successfully:", res.data);
+      })
+      .catch(error => {
+        console.error("There was an error sending the data:", error);
+      });
     console.log(data);
   };
 
